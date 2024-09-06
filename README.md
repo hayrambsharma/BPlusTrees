@@ -29,7 +29,10 @@ Once these parameters are provided, the program enters an interactive mode where
 
 ### Output Format
 
-The tree is displayed level by level, with the keys separated by “–”. Each level of the tree is separated by a vertical bar (`|`) between nodes.
+The tree is displayed as follows:
+- **Keys in a node** are separated by `-`.
+- **Nodes on the same level** are separated by `|`.
+- **Different levels** are displayed on separate lines.
 
 ## Build Instructions
 
