@@ -1,4 +1,4 @@
-# B+ Tree Implementation in C++
+# B+ Trees
 
 ## Overview
 
