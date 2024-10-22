@@ -19,12 +19,11 @@ public:
             auto it = lower_bound(key.begin(), key.end(), val);
             if(it != key.end() && *it == val) return nullptr;
             key.insert(it, val);
-            if(key.size() > order_leaf){
-                int j = order_leaf / 2;
-                next = new Node();
-                for(int i = j + 1; i < key.size(); i++) next -> key.push_back(key[i]);
-                key.resize(j + 1);
-            }
+            if(key.size() <= order_leaf) return nullptr;
+            int j = order_leaf / 2;
+            next = new Node();
+            for(int i = j + 1; i < key.size(); i++) next -> key.push_back(key[i]);
+            key.resize(j + 1);
             return next;
         }
         auto child = children[lower_bound(key.begin(), key.end(), val) - key.begin()];
